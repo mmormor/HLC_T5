@@ -2,5 +2,10 @@ def bas_exp(a,b):
         cont=a
         for i in range(1,b):
                 cont*=a
-        print(cont)
-bas_exp(2,3)
+        
+        return cont
+
+a=int(input("Introduce la base: "))
+b=int(input("Introduce el exponente: "))
+resultado=bas_exp(a,b)
+print(resultado)
