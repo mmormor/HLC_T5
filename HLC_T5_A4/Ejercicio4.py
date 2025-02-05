@@ -4,8 +4,9 @@ def contar_digitos(numero):
     for n in numero :
         digitos += 1
         
-    print(digitos)
+    return digitos
 
 numero=int(input("Introduzca un número: "))
-contar_digitos(str(numero))
+resultado=contar_digitos(str(numero))
+print(resultado)
 
