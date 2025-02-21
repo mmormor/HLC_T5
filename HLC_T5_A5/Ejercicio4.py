@@ -1,15 +1,17 @@
-class CuentBanca:
-    def __init__(self, saldo):
-        self.saldo = saldo
-    def deposito(self, sumar):
-        self.sumar = sumar
-        self.saldo += self.sumar
-    def ver_sal(self):
-        return f"El saldo es de {self.saldo}"
-    def retir(self, restar):
-        self.restar = restar
-        self.saldo -= self.restar
-cuenta = CuentBanca(1000)
-cuenta.deposito(500)
-cuenta.retir(300)
-print(cuenta.ver_sal())
+class CuentaBancaria:
+    def __init__(self, balance):
+        self.balance = balance
+
+    def ingresar(self, cantidad):
+        self.balance += cantidad
+
+    def retirar(self, cantidad):
+        self.balance -= cantidad
+
+    def mostrar_saldo(self):
+        return f"Saldo actual: {self.balance}"
+
+mi_cuenta = CuentaBancaria(1000)
+mi_cuenta.ingresar(500)
+mi_cuenta.retirar(300)
+print(mi_cuenta.mostrar_saldo())
