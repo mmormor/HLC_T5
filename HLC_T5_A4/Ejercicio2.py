@@ -8,4 +8,8 @@ def n_esimo(n):
    
 n=int(input("Introduce un numero: "))
 resultado=n_esimo(n)
+<<<<<<< HEAD
 print(resultado)
+=======
+print(resultado)
+>>>>>>> d137e77e8b90803bd73eb4e070ef23cfac3a4223

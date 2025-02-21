@@ -6,4 +6,8 @@ def suma(numero):
     
 numero=int(input("Introduce un numero: "))
 resultado=suma(numero)
+<<<<<<< HEAD
 print(resultado)
+=======
+print(resultado)
+>>>>>>> d137e77e8b90803bd73eb4e070ef23cfac3a4223
