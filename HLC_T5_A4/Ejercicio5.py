@@ -1,16 +1,8 @@
-def contar_digitos(numero):
-    
-    digitos = 0
-    dig=0
-    for n in numero :
-        digitos += 1
-    for n in range(1,digitos+1):
-        dig+=n   
-    print('La suma de toods los numeros es ',dig)
-   
-    
-    
+def suma(n):
+    if n == 0:
+        return 0
+    if n < 10:
+        return 1
+    return 1 + suma(n/10)
 
-numero=int(input("Introduzca un número: "))
-contar_digitos(str(numero))
-
+print(suma(1234))
