@@ -1,19 +1,19 @@
-lista_libros = []
+coleccion_libros = []
 
-class Libros:
-    def __init__(self, titulo, autor):
-        self.titulo = titulo
-        self.autor = autor
+class Libro:
+    def __init__(self, nombre, escritor):
+        self.nombre = nombre
+        self.escritor = escritor
 
-class Bibliotecas:
-    def agregar_libro(self, libro):
-        lista_libros.append(libro)
+class Biblioteca:
+    def añadir_libro(self, libro):
+        coleccion_libros.append(libro)
 
-    def mostrar_libros(self):
-        for i, libro in enumerate(lista_libros, start=1):
-            print(f"{i}. {libro.titulo} - {libro.autor}")
+    def listar_libros(self):
+        for i, libro in enumerate(coleccion_libros, start=1):
+            print(f"{i}. {libro.nombre} - {libro.escritor}")
 
-biblio = Bibliotecas()
-biblio.agregar_libro(Libros("1984", "George Orwell"))
-biblio.agregar_libro(Libros("Cien Años de Soledad", "Gabriel García Márquez"))
-biblio.mostrar_libros()
+mi_biblioteca = Biblioteca()
+mi_biblioteca.añadir_libro(Libro("1984", "George Orwell"))
+mi_biblioteca.añadir_libro(Libro("Cien Años de Soledad", "Gabriel García Márquez"))
+mi_biblioteca.listar_libros()
