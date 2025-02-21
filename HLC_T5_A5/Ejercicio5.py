@@ -1,22 +1,29 @@
 import math
 
-class Figuras:
+class FormaGeometrica:
     def __init__(self):
         pass
-    def calcular_area(self):
+
+    def obtener_area(self):
         pass
-class Circulo(Figuras):
+
+class Esfera(FormaGeometrica):
     def __init__(self, radio):
         self.radio = radio
-    def calcular_area(self):
-        return math.pi*self.radio**2
-class Rectangulo(Figuras):
-    def __init__(self, base, altura):
-        self.base = base
-        self.altura = altura
-    def calcular_area(self):
-        return self.base*self.altura
-c = Circulo(5)
-r = Rectangulo(4, 6)
-print(c.calcular_area())
-print(r.calcular_area())
+
+    def obtener_area(self):
+        return math.pi * (self.radio ** 2)
+
+class Cuadrilatero(FormaGeometrica):
+    def __init__(self, ancho, alto):
+        self.ancho = ancho
+        self.alto = alto
+
+    def obtener_area(self):
+        return self.ancho * self.alto
+
+figura1 = Esfera(5)
+figura2 = Cuadrilatero(4, 6)
+
+print(figura1.obtener_area())
+print(figura2.obtener_area())
