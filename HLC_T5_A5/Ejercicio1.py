@@ -1,12 +1,11 @@
-class Personas:
-    def __init__(self, nombre, edad, profesion):
+class Individuo:
+    def __init__(self, nombre, edad, ocupacion):
         self.nombre = nombre
         self.edad = edad
-        self.profesion = profesion
+        self.ocupacion = ocupacion
 
-    def presentar(self):
-        return f"Hola, mi nombre es {self.nombre}, tengo {self.edad} años y soy {self.profesion}."
+    def presentacion(self):
+        return f"Hola, soy {self.nombre}, tengo {self.edad} años y trabajo como {self.ocupacion}."
 
-
-p = Personas("Ana", 28, "Ingeniera")
-print(p.presentar())
+persona = Individuo("Ana", 28, "Ingeniera")
+print(persona.presentacion())
