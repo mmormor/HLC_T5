@@ -1,11 +1,11 @@
 lista_libros = []
 
-class Libro:
+class Libros:
     def __init__(self, titulo, autor):
         self.titulo = titulo
         self.autor = autor
 
-class Biblioteca:
+class Bibliotecas:
     def agregar_libro(self, libro):
         lista_libros.append(libro)
 
@@ -13,7 +13,7 @@ class Biblioteca:
         for i, libro in enumerate(lista_libros, start=1):
             print(f"{i}. {libro.titulo} - {libro.autor}")
 
-biblio = Biblioteca()
-biblio.agregar_libro(Libro("1984", "George Orwell"))
-biblio.agregar_libro(Libro("Cien Años de Soledad", "Gabriel García Márquez"))
+biblio = Bibliotecas()
+biblio.agregar_libro(Libros("1984", "George Orwell"))
+biblio.agregar_libro(Libros("Cien Años de Soledad", "Gabriel García Márquez"))
 biblio.mostrar_libros()
