@@ -1,16 +1,16 @@
 import math
 
-class Figura:
+class Figuras:
     def __init__(self):
         pass
     def calcular_area(self):
         pass
-class Circulo(Figura):
+class Circulo(Figuras):
     def __init__(self, radio):
         self.radio = radio
     def calcular_area(self):
         return math.pi*self.radio**2
-class Rectangulo(Figura):
+class Rectangulo(Figuras):
     def __init__(self, base, altura):
         self.base = base
         self.altura = altura
