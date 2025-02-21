@@ -1,15 +1,19 @@
-class Personas:
-    def __init__(self, nombre, edad, profesion):
+class Individuo:
+    def __init__(self, nombre, edad, ocupacion):
         self.nombre = nombre
         self.edad = edad
-        self.profesion = profesion
-    def presentar(self):
-        return f"Hola, mi nombre es {self.nombre}, tengo {self.edad} años y soy {self.profesion}"
-class Estudiante(Personas):
-    def __init__(self, nombre, edad, profesion, grado):
-        super().__init__(nombre, edad, profesion)
-        self.grado = grado
-    def presentar(self):
-        return f"Hola, mi nombre es {self.nombre}, tengo {self.edad} años, soy {self.profesion} y estudio {self.grado}"
-p = Estudiante('Alejandro', 20, 'Informático', 'SMR')
-print(p.presentar())
+        self.ocupacion = ocupacion
+
+    def descripcion(self):
+        return f"Hola, soy {self.nombre}, tengo {self.edad} años y me dedico a {self.ocupacion}"
+
+class Alumno(Individuo):
+    def __init__(self, nombre, edad, ocupacion, nivel):
+        super().__init__(nombre, edad, ocupacion)
+        self.nivel = nivel
+
+    def descripcion(self):
+        return f"Hola, soy {self.nombre}, tengo {self.edad} años, me dedico a {self.ocupacion} y curso {self.nivel}"
+
+persona = Alumno("Alejandro", 20, "Informática", "SMR")
+print(persona.descripcion())
